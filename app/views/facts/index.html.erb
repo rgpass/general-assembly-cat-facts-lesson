@@ -1,0 +1,9 @@
+<h1>Facts from CatFact API</h1>
+
+<ol>
+	<% @facts.each do |fact| %>
+		<li><%= fact %></li>
+
+		<%= link_to "Favorite", facts_path(content: fact), method: :post %>
+	<% end %>
+</ol>
